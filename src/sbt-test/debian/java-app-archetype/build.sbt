@@ -18,7 +18,7 @@ packageDescription := """A fun package description of our software,
 (Debian / debianPackageRecommends) += "git"
 
 TaskKey[Unit]("checkScript") := {
-  val dir = ((Universal / stagingDirectory)).value
+  val dir = (Universal / stagingDirectory).value
   val script = dir / "bin" / name.value
   System.out.synchronized {
     System.err.println("---SCRIPT---")
